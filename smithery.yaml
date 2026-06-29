@@ -1,0 +1,16 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    description: No configuration options required. tokenguard uses only public APIs.
+    properties: {}
+  commandFunction:
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['index.js'],
+      env: {}
+    })
+  exampleConfig: {}
