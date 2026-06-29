@@ -1,0 +1,24 @@
+{
+  "name": "@eltociear/tokenguard-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for tokenguard: 40+ crypto/DeFi data tools for AI agents. Free, no API keys required.",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "tokenguard-mcp": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": ["mcp", "crypto", "defi", "blockchain", "ethereum", "solana", "bitcoin", "web3", "tokenguard", "coingecko", "defillama", "price", "gas", "tvl"],
+  "author": "eltociear",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eltociear/tokenguard-mcp"
+  },
+  "homepage": "https://eltociear-tokenguard.hf.space",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0"
+  }
+}
