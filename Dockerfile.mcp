@@ -1,0 +1,18 @@
+# MCP stdio server image, published to the official MCP Registry as
+# io.github.eltociear/tokenguard-mcp.
+FROM node:20-alpine
+
+LABEL org.opencontainers.image.title="tokenguard-mcp"
+LABEL org.opencontainers.image.description="MCP server: 40+ crypto/DeFi data tools for AI agents. Free, no API keys required."
+LABEL org.opencontainers.image.source="https://github.com/eltociear/tokenguard-mcp"
+LABEL org.opencontainers.image.licenses="MIT"
+# Required by the official MCP Registry to verify OCI image ownership (must match server.json name).
+LABEL io.modelcontextprotocol.server.name="io.github.eltociear/tokenguard-mcp"
+
+WORKDIR /app
+COPY package.json package-lock.json /app/
+RUN npm ci --omit=dev || npm install --omit=dev
+COPY index.js /app/index.js
+
+# Runs the JSON-RPC MCP server over stdio.
+ENTRYPOINT ["node", "/app/index.js"]
