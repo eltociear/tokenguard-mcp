@@ -1,0 +1,19 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.eltociear/tokenguard-mcp",
+  "description": "MCP server: 40+ crypto/DeFi data tools for AI agents (price, gas, TVL, whale tracking, options, ERC-20 safety). Free, no API keys.",
+  "repository": {
+    "url": "https://github.com/eltociear/tokenguard-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/eltociear/tokenguard-mcp:mcp-1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}
